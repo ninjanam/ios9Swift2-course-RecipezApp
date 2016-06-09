@@ -13,6 +13,10 @@
 		691388481D06553A001F5C3F /* recipez.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 691388461D06553A001F5C3F /* recipez.xcdatamodeld */; };
 		6913884A1D06553A001F5C3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 691388491D06553A001F5C3F /* Assets.xcassets */; };
 		6913884D1D06553A001F5C3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6913884B1D06553A001F5C3F /* LaunchScreen.storyboard */; };
+		6913885F1D08F79C001F5C3F /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6913885D1D08F79C001F5C3F /* Recipe+CoreDataProperties.swift */; };
+		691388601D08F79C001F5C3F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6913885E1D08F79C001F5C3F /* Recipe.swift */; };
+		691388621D09FE5B001F5C3F /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691388611D09FE5B001F5C3F /* RecipeCell.swift */; };
+		691388641D0A0CA9001F5C3F /* CreateRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691388631D0A0CA9001F5C3F /* CreateRecipeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		691388491D06553A001F5C3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6913884C1D06553A001F5C3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6913884E1D06553A001F5C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6913885D1D08F79C001F5C3F /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "../Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6913885E1D08F79C001F5C3F /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = ../Recipe.swift; sourceTree = "<group>"; };
+		691388611D09FE5B001F5C3F /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		691388631D0A0CA9001F5C3F /* CreateRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRecipeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		6913883E1D06553A001F5C3F /* recipez */ = {
 			isa = PBXGroup;
 			children = (
+				691388561D08F552001F5C3F /* Controller */,
+				691388551D08F54E001F5C3F /* View */,
+				691388541D08F548001F5C3F /* Model */,
 				6913883F1D06553A001F5C3F /* AppDelegate.swift */,
-				691388411D06553A001F5C3F /* ViewController.swift */,
 				691388431D06553A001F5C3F /* Main.storyboard */,
 				691388491D06553A001F5C3F /* Assets.xcassets */,
 				6913884B1D06553A001F5C3F /* LaunchScreen.storyboard */,
-				6913884E1D06553A001F5C3F /* Info.plist */,
 				691388461D06553A001F5C3F /* recipez.xcdatamodeld */,
+				6913884E1D06553A001F5C3F /* Info.plist */,
 			);
 			path = recipez;
+			sourceTree = "<group>";
+		};
+		691388541D08F548001F5C3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6913885D1D08F79C001F5C3F /* Recipe+CoreDataProperties.swift */,
+				6913885E1D08F79C001F5C3F /* Recipe.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		691388551D08F54E001F5C3F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				691388611D09FE5B001F5C3F /* RecipeCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		691388561D08F552001F5C3F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				691388411D06553A001F5C3F /* ViewController.swift */,
+				691388631D0A0CA9001F5C3F /* CreateRecipeVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +176,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				691388421D06553A001F5C3F /* ViewController.swift in Sources */,
+				6913885F1D08F79C001F5C3F /* Recipe+CoreDataProperties.swift in Sources */,
 				691388401D06553A001F5C3F /* AppDelegate.swift in Sources */,
+				691388621D09FE5B001F5C3F /* RecipeCell.swift in Sources */,
+				691388641D0A0CA9001F5C3F /* CreateRecipeVC.swift in Sources */,
 				691388481D06553A001F5C3F /* recipez.xcdatamodeld in Sources */,
+				691388601D08F79C001F5C3F /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,10 +294,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = recipez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tentwelve.recipez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -265,6 +307,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = recipez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tentwelve.recipez;
